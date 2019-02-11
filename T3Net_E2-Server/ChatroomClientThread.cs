@@ -157,18 +157,9 @@ namespace T3Net_E2_Server
                 writer.WriteLine(String.Format(Properties.strings.CHAT_BYEMSG, userName));
                 writer.Flush();
                 //Closing streams
-                if (writer != null)
-                {
-                    writer.Close();
-                }
-                if (reader != null)
-                {
-                    reader.Close();
-                }
-                if (ns != null)
-                {
-                    ns.Close();
-                }
+                writer.Close();
+                reader.Close();
+                ns.Close();
             }
             catch (IOException)
             {
